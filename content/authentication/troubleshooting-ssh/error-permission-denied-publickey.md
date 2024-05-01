@@ -120,6 +120,17 @@ The `ssh-add` command _should_ print out a long string of numbers and letters. I
 
 {% endtip %}
 
+## Verify that the custom-name key file is configured in ~/.ssh/config file
+
+When using custom-named key file, add below entry in the config file, so that it can be used when connecting to github for git operations.
+
+```shell copy
+Host github.com
+  IdentityFile ~/.ssh/custom-name-key-file
+```
+
+
+
 ### Getting more details
 
 You can also check that the key is being used by trying to connect to `git@{% data variables.command_line.backticks %}`:
